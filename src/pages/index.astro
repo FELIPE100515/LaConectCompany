@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.jsx';
+import Footer from '../components/Footer.astro';
+
+const currentPath = '/';
+---
+
+<Layout title="Home">
+  <Navbar client:load currentPath={currentPath} />
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img alt="Concert stage" class="w-full h-full object-cover opacity-40 mix-blend-luminosity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6pfuVJQm9klexwn7_kEXhU9GeFHWzpVcZSNRHuNmFiDsFhjDUenmzlOJTsznzRm8SJ5MTkBmaBAbALCRHv_-mnrBlwomVFB7xhFX9Up5h2czW4ExyzfxXlR2lUvQB6Wzrs8K4-xjJ4gmfAvZPJZ2IWzUfGkkkWxMoRo5JLGV7h8suhcD1IY8jYT5enuEOdMrKglYnPYjm_-sK4EwK8Fw6pjmUz6l8pcFDVUbcMzaASl91UMAicwE2U8gDn2jEerQzjRSfa4FKQEYD"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/80 to-transparent"></div>
+      </div>
+      <div class="relative z-10 text-center px-6 max-w-5xl mx-auto flex flex-col items-center gap-8 mt-16">
+        <h1 class="font-headline text-5xl md:text-7xl font-bold tracking-[-0.02em] text-on-surface leading-[1.1]">
+          Tú creas el arte,<br/>nosotros construimos el <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-on-primary-fixed-variant">imperio</span>
+        </h1>
+        <p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-3xl leading-relaxed">
+          Gestión de talento de élite. Nos encargamos de la complejidad administrativa para que tú domines el escenario principal.
+        </p>
+        <a href="/contacto" class="mt-8 bg-gradient-to-br from-primary-container to-on-primary-fixed-variant text-on-primary font-bold text-lg px-10 py-5 rounded-xl hover:scale-105 hover:shadow-[0_0_20px_rgba(255,95,31,0.6)] transition-all duration-300 flex items-center gap-3">
+          Quiero ser representado
+          <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Philosophy Section -->
+    <section class="py-32 px-6 bg-surface-container-low relative">
+      <div class="max-w-4xl mx-auto text-center space-y-12">
+        <span class="font-label text-sm uppercase tracking-[0.05em] text-tertiary">Nuestra Filosofía</span>
+        <h2 class="font-headline text-3xl md:text-5xl font-bold text-on-surface leading-tight tracking-tight">
+          La excelencia exige un enfoque inquebrantable.
+        </h2>
+        <div class="font-body text-lg text-on-surface-variant leading-relaxed max-w-2xl mx-auto space-y-6">
+          <p>
+            Entendemos que el talento generacional no debe ser frenado por la burocracia. En La Conet Company, actuamos como tu escudo operativo.
+          </p>
+          <p>
+            Desde contratos multimillonarios hasta la logística de giras globales, construimos la infraestructura invisible que sostiene tu legado, permitiéndote operar en tu estado de máximo rendimiento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries Grid -->
+    <section class="py-32 px-6 bg-surface relative z-10">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
+          <div>
+            <span class="font-label text-sm uppercase tracking-[0.05em] text-primary-container mb-4 block">Divisiones</span>
+            <h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface tracking-tight">Domina tu Arena</h2>
+          </div>
+          <p class="font-body text-on-surface-variant max-w-md">Especialización profunda para carreras de alto impacto.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Music Card -->
+          <a href="/divisiones" class="group relative bg-surface-container-lowest rounded-sm overflow-hidden transition-all duration-500 hover:bg-surface-container-high cursor-pointer h-[500px] flex flex-col justify-end p-8 border border-transparent hover:border-outline-variant/30">
+            <div class="absolute inset-0 w-full h-full opacity-20 group-hover:opacity-40 transition-opacity duration-500">
+              <img alt="Music Stage" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-VjQvfOUMpoL65PEhrT97KtH6U8WXZ6Fb4tBhxwlvjCpwS3rF2MfqQSxKySwf3GF0-MsEPe-z8eYCzK8yVpViIRVPp2oeeevDQhtvCcpsS2CxergWkmBHyhl7772CKOeGPpGrcFN07LCmaj2a1zjLgtc926f5M_9d26p0qLS09ktmOpU0fjNAp5J2iTGNJn91PkNhJa6yA_KcNdwrbSKiKgluzQvXq3wnc1EocDxmvOXpgO1sfWuR-9MqpPLgbmxJSobgFOerm4hp"/>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-transparent"></div>
+            <div class="relative z-10 flex flex-col gap-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+              <div class="w-16 h-16 rounded-full bg-surface-variant/60 backdrop-blur-md flex items-center justify-center text-on-surface group-hover:text-primary-container group-hover:shadow-[0_0_20px_rgba(255,95,31,0.3)] transition-all duration-300">
+                <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">mic</span>
+              </div>
+              <h3 class="font-headline text-3xl font-bold text-on-surface tracking-tight">Música</h3>
+              <p class="font-body text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 h-0 group-hover:h-auto overflow-hidden group-hover:overflow-visible">
+                Gestión integral de artistas, publishing, booking global y desarrollo de marca sonora.
+              </p>
+            </div>
+          </a>
+
+          <!-- Sports Card -->
+          <a href="/divisiones" class="group relative bg-surface-container-lowest rounded-sm overflow-hidden transition-all duration-500 hover:bg-surface-container-high cursor-pointer h-[500px] flex flex-col justify-end p-8 border border-transparent hover:border-outline-variant/30">
+            <div class="absolute inset-0 w-full h-full opacity-20 group-hover:opacity-40 transition-opacity duration-500">
+              <img alt="Sports Arena" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV9AZzdoEV6C5rtu2799qzOorTKsAVxz61kwEbgoMQpw0C2L4b8UPV3mcX_ji7vNZFRkLuCjdxNgIf48g0XhukPRELphbtcLAUt-R7hTKHBteIrH_T8i9v5U56bTeFfRnrx_1d5pAu22CmFj4Ev_P5zrqgNDsWLZSFVEpb1WY_U8SAdWePnNjxk85LeeojL_5ucGs9d15cGjYrER4DCCMfqI_GSRlzNdrDRuhTSMEs_6WpgUs_p8OSI1nM9UftdKIa9nJmWEt2ptUJ"/>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-transparent"></div>
+            <div class="relative z-10 flex flex-col gap-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+              <div class="w-16 h-16 rounded-full bg-surface-variant/60 backdrop-blur-md flex items-center justify-center text-on-surface group-hover:text-primary-container group-hover:shadow-[0_0_20px_rgba(255,95,31,0.3)] transition-all duration-300">
+                <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">sports_soccer</span>
+              </div>
+              <h3 class="font-headline text-3xl font-bold text-on-surface tracking-tight">Deporte</h3>
+              <p class="font-body text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 h-0 group-hover:h-auto overflow-hidden group-hover:overflow-visible">
+                Negociación de contratos, patrocinios, gestión patrimonial y relaciones públicas para atletas de élite.
+              </p>
+            </div>
+          </a>
+
+          <!-- Entertainment Card -->
+          <a href="/divisiones" class="group relative bg-surface-container-lowest rounded-sm overflow-hidden transition-all duration-500 hover:bg-surface-container-high cursor-pointer h-[500px] flex flex-col justify-end p-8 border border-transparent hover:border-outline-variant/30">
+            <div class="absolute inset-0 w-full h-full opacity-20 group-hover:opacity-40 transition-opacity duration-500">
+              <img alt="Entertainment" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxcReQRONH67prY5fGbnIcKkBXo83TpdJ6BBzLMm4pqmYxGZQHdh2JO5N7m6WmlGFvSfQZXBuKiLg7SsTHV-MB_hwA3zs7gvKkKbu2vHMk9L3KrI-oIj0Z8C5wquZnXM7sDWSssp8ap4HC3ENbdFLe5KPpSseGOrtFBwEF56rYMZzsk7jiLMw-5uFA9-tl9ExNzglqIw75hT2PtZyMfxI1CJJkYj_nDfg88-s-Sav3aUQ8VTB2YI3V-Omv1H7C3sqps7GGVXNj9c3h"/>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-transparent"></div>
+            <div class="relative z-10 flex flex-col gap-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+              <div class="w-16 h-16 rounded-full bg-surface-variant/60 backdrop-blur-md flex items-center justify-center text-on-surface group-hover:text-primary-container group-hover:shadow-[0_0_20px_rgba(255,95,31,0.3)] transition-all duration-300">
+                <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">movie</span>
+              </div>
+              <h3 class="font-headline text-3xl font-bold text-on-surface tracking-tight">Entretenimiento</h3>
+              <p class="font-body text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 h-0 group-hover:h-auto overflow-hidden group-hover:overflow-visible">
+                Representación actoral, producción ejecutiva, licencias y expansión de franquicias personales.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

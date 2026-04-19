@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.jsx';
+import Footer from '../components/Footer.astro';
+import ContactForm from '../components/ContactForm.jsx';
+
+const currentPath = '/contacto';
+---
+
+<Layout title="Contacto">
+  <Navbar client:load currentPath={currentPath} />
+
+  <main class="flex-grow pt-32 pb-24 px-6 md:px-12 max-w-screen-2xl mx-auto w-full">
+    <!-- Header Section -->
+    <div class="mb-16 md:mb-24">
+      <h1 class="text-5xl md:text-7xl font-bold tracking-[-0.02em] text-white mb-6 uppercase">
+        Únete al <span class="text-primary-container">Equipo</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-[1.6]">
+        Buscamos talento excepcional. Si tienes lo necesario para operar en el estándar de élite, deja tu marca aquí.
+      </p>
+    </div>
+
+    <!-- Asymmetric Layout: Form & Info -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+      
+      <!-- Left Column: Form (7 cols) -->
+      <div class="lg:col-span-7">
+        <ContactForm client:load />
+      </div>
+
+      <!-- Right Column: Info & Map (5 cols) -->
+      <div class="lg:col-span-5 flex flex-col gap-8">
+        
+        <!-- Direct Contact Card -->
+        <div class="bg-surface-container-low p-8 rounded-lg flex flex-col gap-6">
+          <h3 class="font-bold text-white text-xl uppercase tracking-tighter">Acceso Directo</h3>
+          <div class="flex flex-col gap-4">
+            <a class="group flex items-center gap-4 p-4 bg-surface rounded-md border border-outline-variant/20 hover:bg-surface-bright transition-colors" href="#">
+              <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary transition-colors text-on-surface-variant">
+                <span class="material-symbols-outlined">chat</span>
+              </div>
+              <div>
+                <div class="text-xs font-label uppercase tracking-[0.05em] text-on-surface-variant group-hover:text-primary-container transition-colors">WhatsApp</div>
+                <div class="text-sm font-medium text-white">+1 (555) 019-2837</div>
+              </div>
+            </a>
+            
+            <a class="group flex items-center gap-4 p-4 bg-surface rounded-md border border-outline-variant/20 hover:bg-surface-bright transition-colors" href="#">
+              <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary transition-colors text-on-surface-variant">
+                <span class="material-symbols-outlined">photo_camera</span>
+              </div>
+              <div>
+                <div class="text-xs font-label uppercase tracking-[0.05em] text-on-surface-variant group-hover:text-primary-container transition-colors">Instagram</div>
+                <div class="text-sm font-medium text-white">@laconetcompany</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Map Area -->
+        <div class="relative w-full h-[300px] md:h-full min-h-[300px] rounded-lg overflow-hidden group bg-surface-container-highest">
+          <div class="absolute inset-0 bg-cover bg-center opacity-60 mix-blend-luminosity group-hover:scale-105 transition-transform duration-700 ease-out" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCnhVIBhP2Y2DTy9MMCiumjX9Au3hPJSrhoXHDVFwIjBwCMYAF8H5qoABIm6LFhKf4Zc5KoITj2ab0kK3Bcb9zEtiQ0oCRqrGAvfuL3WIyMPTYsih8FUIDWXTeSCu-W4noV9uHO587jUcT3xcwkzJ75LkCy-qtdvS-60WsCPhj0qMCsGsU2PEc6JhcBSkaDEifw-yF5LnevMi5s3mZRvZiAyj4AS9ZdrlayEy3Woo1CJkdLF64AiJjMZDGJZ7JyQxpSAaoZatzbKJNE');">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6">
+            <div class="text-xs font-label uppercase tracking-[0.05em] text-primary-container mb-1">Headquarters</div>
+            <div class="text-lg font-bold text-white tracking-tighter">Los Angeles, CA</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
