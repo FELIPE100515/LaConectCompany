@@ -15,7 +15,7 @@ export default function Navbar({ currentPath }) {
       <nav className="fixed top-0 w-full z-50 glass-nav shadow-[0_40px_60px_-5px_rgba(0,0,0,0.4)]">
         <div className="flex justify-between items-center px-6 md:px-12 py-6 w-full max-w-screen-2xl mx-auto">
           <div className="text-2xl font-black tracking-tighter text-white italic">
-            La Conet Company
+            La Conect Company
           </div>
           
           <div className="hidden md:flex gap-8 items-center font-['Inter'] antialiased tracking-tighter uppercase font-bold text-sm">
