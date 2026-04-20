@@ -97,7 +97,7 @@ export default function ContactForm() {
       <div className="pt-6">
         <button 
           disabled={status === 'submitting'}
-          className={`w-full md:w-auto bg-gradient-to-br text-on-primary font-bold uppercase tracking-[0.05em] text-sm px-10 py-5 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(255,95,31,0.2)] flex items-center justify-center gap-3 ${
+          className={`w-full md:w-auto bg-gradient-to-br text-white font-bold uppercase tracking-[0.05em] text-sm px-10 py-5 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(255,95,31,0.2)] flex items-center justify-center gap-3 ${
             status === 'success' 
               ? 'from-green-500 to-green-700' 
               : 'from-primary-container to-on-primary-fixed-variant hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,95,31,0.4)]'
