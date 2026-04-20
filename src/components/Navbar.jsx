@@ -4,10 +4,10 @@ export default function Navbar({ currentPath }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const links = [
-    { label: 'Home', href: '/' },
-    { label: 'Divisions', href: '/divisiones' },
-    { label: 'Services', href: '/servicios' },
-    { label: 'Contact', href: '/contacto' },
+    { label: 'Inicio', href: '/' },
+    { label: 'Divisiones', href: '/divisiones' },
+    { label: 'Servicios', href: '/servicios' },
+    { label: 'Contacto', href: '/contacto' },
   ];
 
   return (
@@ -39,7 +39,7 @@ export default function Navbar({ currentPath }) {
 
           <div className="hidden md:block">
             <button className="bg-gradient-to-br from-primary-container to-on-primary-fixed-variant text-on-primary rounded-xl px-6 py-3 font-bold uppercase tracking-wider text-xs hover:scale-105 transition-transform shadow-[0_0_15px_rgba(255,95,31,0.3)]">
-              Get Access
+              Acceder
             </button>
           </div>
 
@@ -78,7 +78,7 @@ export default function Navbar({ currentPath }) {
           </div>
           
           <button className="w-full py-5 bg-gradient-to-br from-primary-container to-on-primary-fixed-variant rounded-xl text-on-primary font-bold text-lg uppercase tracking-wider mt-8 hover:scale-[1.02] transition-transform">
-            Get Access
+            Acceder
           </button>
         </div>
       )}

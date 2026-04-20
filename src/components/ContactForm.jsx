@@ -88,7 +88,7 @@ export default function ContactForm() {
           className="absolute text-sm font-label uppercase tracking-[0.05em] text-on-surface-variant duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:text-primary-container" 
           htmlFor="message"
         >
-          ¿Por qué La Conet?
+          ¿Por qué La Conect?
         </label>
         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-white/10 group-hover:bg-white/20 transition-colors pointer-events-none peer-focus:hidden"></div>
       </div>
