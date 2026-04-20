@@ -37,12 +37,6 @@ export default function Navbar({ currentPath }) {
             })}
           </div>
 
-          <div className="hidden md:block">
-            <button className="bg-gradient-to-br from-primary-container to-on-primary-fixed-variant text-on-primary rounded-xl px-6 py-3 font-bold uppercase tracking-wider text-xs hover:scale-105 transition-transform shadow-[0_0_15px_rgba(255,95,31,0.3)]">
-              Acceder
-            </button>
-          </div>
-
           <button 
             className="md:hidden text-on-surface"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -76,10 +70,6 @@ export default function Navbar({ currentPath }) {
               );
             })}
           </div>
-          
-          <button className="w-full py-5 bg-gradient-to-br from-primary-container to-on-primary-fixed-variant rounded-xl text-on-primary font-bold text-lg uppercase tracking-wider mt-8 hover:scale-[1.02] transition-transform">
-            Acceder
-          </button>
         </div>
       )}
     </>
